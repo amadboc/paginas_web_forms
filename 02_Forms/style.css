@@ -9,3 +9,34 @@ body {
     margin-top: 0.3rem;
     margin-bottom: 0.3rem;
 }
+
+textarea {
+    width: 25rem;
+    height: 10rem;
+}
+
+*:required {
+    border: 1px solid;
+    color: crimson;
+}
+
+input [type="checkbox"] {
+    width: 6rem;
+    background-color: brown
+    }
+
+.textarea-group {
+    display: flex;
+    flex-direction: flex-end;
+    width: 60%;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+}
+
+.check-group {
+    display: flex;
+    flex-direction: flex-end;
+    width: 60%;
+    margin-top: 0.3rem;
+    margin-right: 0.3rem;
+}
