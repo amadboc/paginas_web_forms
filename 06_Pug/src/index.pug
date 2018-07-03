@@ -1,0 +1,76 @@
+
+doctype
+html(lang=idioma)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{titulo}
+        //-title #{titulo}
+        title=titulo
+    
+    body
+
+        // Esto es un comentario
+
+        // Esto es un comentario 
+            de varias lineas
+
+        //- Esto es un comentario solo de pug no se compila
+
+        //- Esto es un comentario solo de pug no se compila
+            de varias lineas
+
+        //Añadiendo contenido en varias líneas
+
+        p
+            | Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            | Laudantium consequuntur labore ab modi harum iusto assumenda 
+            | molestiae eum sequi qui quidem, distinctio tenetur. 
+            | Natus quibusdam rem voluptas at rerum! Alias.
+
+        //Atajo: Añadiendo contenido en varias líneas
+
+        p.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+            Laudantium consequuntur labore ab modi harum iusto assumenda 
+            molestiae eum sequi qui quidem, distinctio tenetur. 
+            Natus quibusdam rem voluptas at rerum! Alias.   
+
+        //Elementos inline
+
+        h1 Ejemplo de
+            i #{metalenguaje.toUpper}
+        P Pug es un 
+            b lenguaje de plantillas 
+            | basado en JS
+        
+        p Pug es un <b>lenguaje de plantillas</b>basado en JS
+
+        //-Atributos
+
+        div(id="div1", class="principal")
+
+        //- ATAJOS. Atributos
+
+        div#div2.principal
+
+        #div3.principal
+
+        //-bloques de expansión
+
+    nav
+        ul
+            let url = "#"+menuItems[0].tolowerCase()
+                li: a(href=url) #{menuItems[0]}
+            -url = 'page1.html'
+                li: a(href=url) #{menuItems[1]}
+                li 
+                    a(href="#"+menuItems[2].tolowerCase()) #{menuItems[2]}
+        
+ //- Variables con HTML
+- let html = "<script> alert('Estás infectado')</script>"
+script = html             
+
+
+

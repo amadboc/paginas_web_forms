@@ -1,0 +1,37 @@
+doctype
+html(lang=idioma)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title titulo
+    body
+        h1 Pug Avanzado
+
+        //Lógica mediante JS
+        //let nombre = "Pepe"
+        - let nombre = "Pepe"
+        - if nombre === 'Pepe') {
+            p HOla otra vez, Pepe
+        - } else {
+            p Hola #{nombre}, ¿donde está Pepe
+        - }
+
+        //-Logica nativa (build-in) Pug
+
+        //-nombre ="Pepe"
+        -let nombre ="Pepe"
+        if (nombre === 'Pepe')
+            p Hola otra vez, Pepe
+        else
+            p Hola #{nombre}, ¿donde está Pepe? 
+
+        -let aOpciones = [C#, 'Java', 'Javascrip'] 
+        -let optName = 'cursos'
+        label(for=optName) Selecciona un curso
+        select(name=optName id=optName) 
+            each opcion in aOpciones
+                option(value=opcion)=opcion
+            button (type="")
+                
+               
