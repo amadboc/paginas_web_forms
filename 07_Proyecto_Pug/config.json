@@ -1,5 +1,8 @@
 {
     "idioma" : "es",
     "titulo" : "Proyecto Pug",
-    "author" : "amadboc"
+    "autor" : "amadboc",
+    "autorMail": "maderoana9@gmail.com",
+    "empresa" : "PandaRojo",
+    "localidad" : "Madrid"
 }
