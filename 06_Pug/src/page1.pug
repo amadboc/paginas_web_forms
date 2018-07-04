@@ -4,34 +4,87 @@ html(lang=idioma)
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title titulo
+        title= titulo
     body
-        h1 Pug Avanzado
+        h1 Pug Avanzado.
 
-        //Lógica mediante JS
-        //let nombre = "Pepe"
-        - let nombre = "Pepe"
-        - if nombre === 'Pepe') {
-            p HOla otra vez, Pepe
+        //- Lógica mediante JS
+
+        //- Condicional IF
+        -let nombre = "Pepe"
+        //-let nombre = "María"
+        -if (nombre === 'Pepe') {
+            p Hola otra vez, Pepe
         - } else {
-            p Hola #{nombre}, ¿donde está Pepe
+            p Hola #{nombre}, ¿donde está Pepe?
         - }
 
-        //-Logica nativa (build-in) Pug
+        //- Iteracion FOR
+        - let aSecciones = ['Inicio', 'Porfolio', 'Clientes', 'About']
+        nav
+            ul
+                -for (let i = 0; i < aSecciones.length; i++) {
+                    -const seccion = aSecciones[i];
+                    li: a(href="#"+seccion.toLowerCase())= seccion
+                - }
 
-        //-nombre ="Pepe"
-        -let nombre ="Pepe"
-        if (nombre === 'Pepe')
+
+        //- Logica nativa (build-in) Pug
+
+        //- Condicional IF
+
+        //- nombre = "Pepe"
+        - nombre = "María"
+        if (nombre === 'Pepe') 
             p Hola otra vez, Pepe
         else
-            p Hola #{nombre}, ¿donde está Pepe? 
+            p Hola #{nombre}, ¿donde está Pepe?
 
-        -let aOpciones = [C#, 'Java', 'Javascrip'] 
+        //- Condicional CASE
+
+        //- name = "Pepe"
+        //- name = "Alicia"
+        - name = "Juan"
+        case name
+            when "Pepe"
+                p Hola Pepe, ¿como estás?
+            when "Alicia"
+                p Que tal, Alicia
+            default
+                p Hola #{name}!
+        
+        //- Iteraciones EACH
+
+        aSecciones = ['Inicio', 'Porfolio', 'Clientes', 'About']
+        nav
+            ul
+                each seccion in aSecciones
+                    li: a(href="#"+seccion.toLowerCase())= seccion
+
+        -let aSections = ['Home', 'Porfolio', 'Clients', 'About']
+        nav
+            ul
+                - let i = 0
+                while i < aSections.length
+                    li: a(href="#"+aSections[i].toLowerCase())= aSections[i]
+                    -i++                      
+            
+        //-let aOpciones = [ {nombre: 'C#', codigo:'37'}, {nombre: 'Java', codigo:'84'}, {nombre: 'JavaScript', codigo:'13'}] 
+        -let aOpciones = cursos
         -let optName = 'cursos'
-        label(for=optName) Selecciona un curso
-        select(name=optName id=optName) 
-            each opcion in aOpciones
-                option(value=opcion)=opcion
-            button (type="")
+        form(action="")
+            label(for=optName) Selecciona un curso
+            select(name=optName id=optName)
+                each opcion in aOpciones
+                    option(value=opcion.codigo)= opcion.nombre
+            button(type="submit") Enviar
                 
-               
+        //- Iteraciones WHILE
+
+        -aSections = ['Home', 'Porfolio', 'Clients', 'About']
+        nav
+            ul
+                - i = 0
+                while i < aSections.length
+                    li: a(href="#"+aSections[i].toLowerCase())= aSections[i]
+                    -i++  
