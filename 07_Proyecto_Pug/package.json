@@ -1,26 +1,26 @@
 {
   "name": "proyecto_pug",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ejercicio de CSS. unidad 3 del módulo 1",
   "main": "index.js",
   "scripts": {
-    "start": "parallelshell \"npm run server\" \"npm run pug\"",
+    "start": "parallelshell \"npm run srv\" \"npm run pug:w\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pug": "pug -P -O ./config.json ./src/pug -o ./dist",
-    "pug-w": "pug -w -P -O ./config.json ./src/pug -o ./dist",
-    "server": "http-server"
+    "pug": "pug -P -O ./config.json -p ./src/partials ./src/pug -o ./dist",
+    "pug:w": "pug -w -P -O ./config.json  -p ./src/partials ./src/pug -o ./dist",
+    "srv": "http-server"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amadboc/paginas_web_forms.git"
+    "url": "git+https://github.com/alce65/paginas_web_forms.git"
   },
   "keywords": [],
-  "author": "amadboc",
+  "author": "Alejandro Cerezo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amadboc/paginas_web_forms/issues"
+    "url": "https://github.com/alce65/paginas_web_forms/issues"
   },
-  "homepage": "https://github.com/amadboc/paginas_web_forms#readme",
+  "homepage": "https://github.com/alce65/paginas_web_forms#readme",
   "dependencies": {
     "bootstrap": "^4.1.1"
   },
