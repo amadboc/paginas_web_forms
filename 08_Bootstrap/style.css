@@ -20,6 +20,7 @@ h1 {
     margin-bottom: 3rem;
     margin-left: .5rem;
     margin-right: .5rem;
+
 }
 
 .footer-wrapper {
@@ -28,3 +29,13 @@ h1 {
     margin-left: .5rem;
     margin-right: .5rem;
 }
+
+/* .btn {
+    border-radius: 80%;
+}
+ */
+@media (min-width: 900px) { 
+    body {
+        background-color: blanchedalmond
+    }
+ }
